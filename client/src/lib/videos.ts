@@ -21,11 +21,11 @@ export const videoData: Record<string, Video[]> = {
     },
     {
       id: "9bZkp7q19f0",
-      title: "Meal Prep Made Simple",
-      description: "Easy strategies for preparing healthy meals throughout the week",
+      title: "Quick Healthy Breakfast Ideas",
+      description: "5 nutritious breakfast options you can make in under 10 minutes",
       channel: "Healthy Kitchen",
       views: "856K views",
-      duration: "15:22",
+      duration: "0:58",
       embedUrl: "https://www.youtube.com/embed/9bZkp7q19f0"
     },
     {

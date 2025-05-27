@@ -55,19 +55,19 @@ export default function Home() {
               Welcome to <span className="text-primary">Wellspire</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
-              Your comprehensive wellness platform for nutrition, health, fitness, and mindfulness. Start your journey to better living today.
+              A refreshing space for wellness inspiration. Discover curated videos and uplifting tips to support you on your journey to feeling your best.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/food">
                 <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 transform hover:scale-105">
                   <Play className="inline mr-2 h-4 w-4" />
-                  Start Learning
+                  Explore Videos
                 </button>
               </Link>
               <Link href="/tips">
                 <button className="bg-white text-primary border-2 border-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 transform hover:scale-105">
                   <Users className="inline mr-2 h-4 w-4" />
-                  Join Community
+                  Share & Discover Tips
                 </button>
               </Link>
             </div>
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discover Your Wellness Path</h2>
-            <p className="text-lg text-gray-800 max-w-2xl mx-auto">Explore curated content and connect with a community passionate about healthy living</p>
+            <p className="text-lg text-gray-800 max-w-2xl mx-auto">Explore curated videos and YouTube shorts to inspire your wellness journey</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -111,12 +111,12 @@ export default function Home() {
       <section className="py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Join Our Wellness Community</h2>
-            <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">Share your wellness tips and learn from others on their journey to better health</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Share & Discover Wellness Tips</h2>
+            <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">A supportive space to share practical wellness tips and find inspiration from others</p>
             <Link href="/tips">
               <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 transform hover:scale-105">
                 <Users className="inline mr-2 h-4 w-4" />
-                View Community Tips
+                Explore Wellness Tips
               </button>
             </Link>
           </div>

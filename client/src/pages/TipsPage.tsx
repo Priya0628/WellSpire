@@ -57,7 +57,7 @@ export default function TipsPage() {
     mutation.mutate(data);
   };
 
-  const filteredTips = filterCategory
+  const filteredTips = filterCategory && filterCategory !== "all"
     ? tips.filter(tip => tip.category === filterCategory)
     : tips;
 
@@ -66,9 +66,9 @@ export default function TipsPage() {
       <div className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
           <Users className="text-primary inline mr-3" />
-          Community Tips
+          Wellness Tips & Inspiration
         </h1>
-        <p className="text-lg text-gray-800">Share your wellness wisdom and discover insights from our community</p>
+        <p className="text-lg text-gray-800">A supportive space to share practical wellness tips and find inspiration for your journey</p>
       </div>
 
       {/* Tips Submission Form */}
@@ -158,7 +158,7 @@ export default function TipsPage() {
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               <SelectItem value="food">Food & Nutrition</SelectItem>
               <SelectItem value="health">Health & Wellness</SelectItem>
               <SelectItem value="workout">Workout & Exercise</SelectItem>
