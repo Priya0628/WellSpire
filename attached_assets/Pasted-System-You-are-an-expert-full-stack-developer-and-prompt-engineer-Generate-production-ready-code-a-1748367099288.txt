@@ -1,0 +1,101 @@
+System: You are an expert full-stack developer and prompt engineer. Generate production-ready code and docs based on the detailed instructions below.
+
+User:
+1. **Project Skeleton & Config**  
+   - Scaffold a new React project using `create-react-app`.  
+   - Install & configure Tailwind CSS.  
+   - Install axios and react-router-dom.  
+   - Set up React Router with three routes: `/` (Home), `/explorer` (AI Explorer), `/prompts` (Prompt Library).  
+   - Output as a JSON object with keys:  
+     • `folderStructure` (array of file/folder paths)  
+     • `packageJson` (full contents)  
+     • `tailwindConfig` (full contents of tailwind.config.js)  
+
+2. **Navbar & Footer Components**  
+   - Create `Navbar.js` and `Footer.js` in `src/components`.  
+   - Navbar must link to Home, AI Explorer, Prompt Library.  
+   - Footer must show copyright text.  
+   - Style both with Tailwind (responsive, dark bg, white text).  
+   - Return full source for each file.
+
+3. **Home (Hero) Page**  
+   - Create `src/pages/Home.js`.  
+   - Show a Hero banner with:  
+     • Full viewport background (image or gradient)  
+     • Headline: “Meet your AI Wellness Coach—personalized plans, 24/7.”  
+     • Subheadline and a “Get Started” button linking to `/explorer`  
+     • Tailwind style: centered, hover effects on button  
+   - Return the full component.
+
+4. **AI Explorer Page & LLM Hook**  
+   - Create `src/hooks/useAIExplorer.js`:  
+     • Export `useAIExplorer()` hook that manages `loading`, `error`, `answer` and provides `explore(appName)` to call `POST http://localhost:5000/api/explore` with `{ app: appName }` via axios.  
+   - Create `src/pages/Explorer.js` that imports and uses `useAIExplorer()`:  
+     • Controlled input for `app` name (default “MyFitnessPal”).  
+     • “Explore” button calls `explore(app)`.  
+     • Show spinner (Tailwind `animate-spin`) when loading.  
+     • Show error text in red if error.  
+     • Show `answer` below form.  
+   - Style form and results with Tailwind.
+
+5. **Prompt Library Page**  
+   - Create `src/pages/Prompts.js`:  
+     • Heading “Prompt Engineering Showcase”  
+     • Code block with system prompt template:  
+       ```
+       You are an expert product reviewer. When the user asks about an app, explain:
+       • What it does
+       • Key features
+       • Who it’s best for
+       Keep it under 200 words.
+       ```  
+     • “Before / After” section showing raw user input vs. optimized prompt.  
+     • Tailwind styling for typography and code.
+
+6. **Flask Backend Proxy**  
+   - Create `backend/app.py` that:  
+     • Reads `OPENAI_API_KEY` from environment.  
+     • Exposes `POST /api/explore` expecting `{ app: string }`.  
+     • Uses OpenAI’s ChatCompletion with the system prompt (as above) and the user message “Tell me about the {app} app and how it helps users.”  
+     • Returns `{ answer: string }`.  
+     • Enables CORS.  
+   - Provide `backend/requirements.txt` (Flask, flask-cors, openai) and `.env.example` showing `OPENAI_API_KEY=`.
+
+7. **Deployment Config & README**  
+   - Create a `Procfile` for AWS Elastic Beanstalk:  
+     ```
+     web: gunicorn app:app
+     ```  
+   - Create `amplify.yml` for AWS Amplify to build & deploy React:  
+     ```yaml
+     version: 1
+     frontend:
+       phases:
+         preBuild:
+           commands: 
+             - npm install
+         build:
+           commands:
+             - npm run build
+       artifacts:
+         baseDirectory: build
+         files:
+           - '**/*'
+       cache:
+         paths:
+           - node_modules/**/*
+     ```  
+   - Generate a `README.md` with:  
+     • Project description  
+     • Tech stack  
+     • Local setup (frontend & backend)  
+     • Deployment instructions  
+     • Placeholder for live-demo screenshot  
+
+8. **LLM Integration Knowledge Call-Out**  
+   - In README, add a “LLM Integration” section explaining your prompt-engineering approach:  
+     • Why you use a system prompt  
+     • How you structured JSON output  
+     • How few-shot/examples improve reliability  
+
+Return your answer as clearly separated code blocks or JSON as appropriate for each of the above eight tasks.

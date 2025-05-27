@@ -19,6 +19,54 @@ export class MemStorage implements IStorage {
     this.tips = new Map();
     this.currentUserId = 1;
     this.currentTipId = 1;
+    
+    // Add some inspiring sample tips
+    this.initializeSampleTips();
+  }
+
+  private initializeSampleTips() {
+    const sampleTips = [
+      {
+        username: "Sarah M.",
+        category: "health",
+        content: "I started setting a gentle alarm to drink water every 2 hours. It's amazing how much better I feel when I'm properly hydrated!"
+      },
+      {
+        username: "Mike T.",
+        category: "workout",
+        content: "Instead of thinking 'I have to work out for an hour,' I tell myself 'just 10 minutes.' Usually I end up doing more, but even 10 minutes counts!"
+      },
+      {
+        username: "Emma K.",
+        category: "food",
+        content: "I prep my snacks on Sunday - cut veggies, portion nuts, wash fruit. When I'm hungry, the healthy option is always the easiest to grab."
+      },
+      {
+        username: "David L.",
+        category: "yoga",
+        content: "Even 5 minutes of deep breathing in the morning sets a peaceful tone for my entire day. No need for a full yoga session to feel centered."
+      },
+      {
+        username: "Lisa R.",
+        category: "health",
+        content: "I write down 3 things I'm grateful for before bed. It's shifted my mindset from focusing on what went wrong to appreciating what went right."
+      },
+      {
+        username: "Alex P.",
+        category: "food",
+        content: "I add a handful of spinach to my smoothies. Can't taste it at all, but I know I'm getting extra nutrients without any effort!"
+      }
+    ];
+
+    sampleTips.forEach(tip => {
+      const id = this.currentTipId++;
+      const tipWithTimestamp = {
+        ...tip,
+        id,
+        createdAt: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000) // Random time within last week
+      };
+      this.tips.set(id, tipWithTimestamp);
+    });
   }
 
   async getUser(id: number): Promise<User | undefined> {

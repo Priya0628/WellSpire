@@ -73,7 +73,8 @@ export default function TipsPage() {
 
       {/* Tips Submission Form */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Share Your Wellness Tip</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Share Your Wellness Tip</h2>
+        <p className="text-gray-600 mb-6">Your experience matters. Share what's working for you to inspire others on their wellness journey.</p>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
@@ -146,7 +147,8 @@ export default function TipsPage() {
 
       {/* Community Tips Display */}
       <div className="bg-white rounded-xl shadow-lg p-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Community Wellness Tips</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Community Wellness Tips</h2>
+        <p className="text-gray-600 mb-6">Real experiences from people on their wellness journey. Find inspiration and practical advice that works.</p>
         
         {/* Filter by Category */}
         <div className="mb-6">
@@ -176,9 +178,9 @@ export default function TipsPage() {
         ) : filteredTips.length === 0 ? (
           <div className="text-center py-8">
             <p className="text-gray-600">
-              {filterCategory 
-                ? "No tips found for this category. Be the first to share!" 
-                : "No tips yet. Be the first to share your wellness wisdom!"
+              {filterCategory && filterCategory !== "all"
+                ? "No tips found for this category yet. Your experience could be exactly what someone needs to hear!" 
+                : "Loading wellness tips from our community..."
               }
             </p>
           </div>
