@@ -202,12 +202,43 @@ export default function Home() {
             </div>
             
             <div className="text-center mt-8">
-              <p className="text-sm text-gray-500 mb-4">
+              <p className="text-sm text-gray-500 mb-6">
                 💡 <strong>Tip:</strong> Start small - even tracking for a few days can provide valuable insights about your eating patterns.
               </p>
-              <div className="inline-flex items-center bg-gray-50 px-4 py-2 rounded-full text-sm text-gray-600">
-                Popular apps: MyFitnessPal • Cronometer • Lose It!
+              
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-700 mb-3">Popular Nutrition Tracking Apps:</h4>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a 
+                    href="https://www.myfitnesspal.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors flex items-center"
+                  >
+                    📱 MyFitnessPal
+                  </a>
+                  <a 
+                    href="https://cronometer.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
+                  >
+                    📊 Cronometer
+                  </a>
+                  <a 
+                    href="https://www.loseit.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-orange-700 transition-colors flex items-center"
+                  >
+                    🎯 Lose It!
+                  </a>
+                </div>
               </div>
+              
+              <p className="text-xs text-gray-400">
+                Available on iOS and Android app stores
+              </p>
             </div>
           </div>
         </div>
