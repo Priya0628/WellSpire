@@ -1,7 +1,40 @@
 import { Link } from "wouter";
-import { Play, Users, Apple, Heart, Dumbbell, MessageSquareOff } from "lucide-react";
+import { Play, Users, Apple, Heart, Dumbbell, MessageSquareOff, MapPin, Calendar } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import type { Tip } from "@shared/schema";
+import TipCard from "@/components/TipCard";
 
 export default function Home() {
+  const { data: tips = [] } = useQuery<Tip[]>({
+    queryKey: ["/api/tips"]
+  });
+
+  // Show latest 3 tips for the timeline
+  const latestTips = tips.slice(0, 3);
+
+  const retreatPlaces = [
+    {
+      name: "Rishikesh, India",
+      description: "Yoga capital of the world with spiritual ashrams and meditation centers",
+      icon: "🧘‍♀️"
+    },
+    {
+      name: "Tulum, Mexico", 
+      description: "Beachfront wellness retreats combining ancient Mayan wisdom with modern healing",
+      icon: "🏝️"
+    },
+    {
+      name: "Bali, Indonesia",
+      description: "Tropical paradise offering holistic healing, yoga, and wellness experiences",
+      icon: "🌺"
+    },
+    {
+      name: "Costa Rica",
+      description: "Eco-wellness retreats in rainforests with focus on sustainable living",
+      icon: "🌿"
+    }
+  ];
+
   const categoryCards = [
     {
       id: "food",
@@ -107,18 +140,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Community Section */}
+      {/* Community Tips Timeline */}
       <section className="py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest Community Tips</h2>
+            <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">Real experiences from people on their wellness journey</p>
+          </div>
+          
+          {latestTips.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {latestTips.map((tip) => (
+                <TipCard
+                  key={tip.id}
+                  username={tip.username}
+                  category={tip.category}
+                  content={tip.content}
+                  createdAt={tip.createdAt.toString()}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center mb-8">
+              <p className="text-gray-600">Loading wellness tips from our community...</p>
+            </div>
+          )}
+          
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Share & Discover Wellness Tips</h2>
-            <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">A supportive space to share practical wellness tips and find inspiration from others</p>
             <Link href="/tips">
               <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 transform hover:scale-105">
                 <Users className="inline mr-2 h-4 w-4" />
-                Explore Wellness Tips
+                View All Tips & Share Yours
               </button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Wellness Retreats Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Wellness Retreat Destinations</h2>
+            <p className="text-lg text-gray-800 max-w-2xl mx-auto">Discover transformative places around the world for your wellness journey</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {retreatPlaces.map((place, index) => (
+              <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">{place.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center justify-center">
+                    <MapPin className="h-5 w-5 mr-2 text-primary" />
+                    {place.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{place.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-600 text-sm">
+              <Calendar className="inline h-4 w-4 mr-1" />
+              Consider visiting these destinations for immersive wellness experiences and personal transformation
+            </p>
           </div>
         </div>
       </section>

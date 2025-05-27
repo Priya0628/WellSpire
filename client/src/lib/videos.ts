@@ -11,40 +11,40 @@ export interface Video {
 export const videoData: Record<string, Video[]> = {
   food: [
     {
-      id: "dQw4w9WgXcQ",
-      title: "Understanding Macronutrients",
-      description: "Learn about proteins, carbohydrates, and fats for optimal nutrition",
-      channel: "Dr. Nutrition",
+      id: "OJAEaAom5FQ",
+      title: "The power of believing that you can improve | Carol Dweck",
+      description: "Growth mindset for health and nutrition changes",
+      channel: "TED",
       views: "1.2M views",
-      duration: "12:34",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      duration: "10:20",
+      embedUrl: "https://www.youtube.com/embed/OJAEaAom5FQ"
     },
     {
-      id: "9bZkp7q19f0",
-      title: "Quick Healthy Breakfast Ideas",
-      description: "5 nutritious breakfast options you can make in under 10 minutes",
-      channel: "Healthy Kitchen",
+      id: "ZfOh_MSaJKo",
+      title: "5 Minute Healthy Breakfast Ideas",
+      description: "Quick and nutritious breakfast options for busy mornings",
+      channel: "HealthyKitchen101",
       views: "856K views",
-      duration: "0:58",
-      embedUrl: "https://www.youtube.com/embed/9bZkp7q19f0"
+      duration: "5:23",
+      embedUrl: "https://www.youtube.com/embed/ZfOh_MSaJKo"
     },
     {
-      id: "kJQP7kiw5Fk",
-      title: "Superfoods for Energy",
-      description: "Discover nutrient-dense foods that boost your energy naturally",
-      channel: "Energy Coach",
-      views: "642K views",
-      duration: "8:45",
-      embedUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk"
+      id: "TvHqwYwhKzM",
+      title: "How the food you eat affects your brain - Mia Nacamulli",
+      description: "Discover how food impacts your brain and mental performance",
+      channel: "TED-Ed",
+      views: "3.2M views",
+      duration: "4:52",
+      embedUrl: "https://www.youtube.com/embed/TvHqwYwhKzM"
     },
     {
-      id: "oHg5SJYRHA0",
-      title: "Plant-Based Nutrition Guide",
-      description: "Complete guide to getting all nutrients from plant-based sources",
-      channel: "Plant Power",
-      views: "923K views",
-      duration: "20:11",
-      embedUrl: "https://www.youtube.com/embed/oHg5SJYRHA0"
+      id: "lI26YcbIX2c", 
+      title: "What I eat in a day for a healthy brain",
+      description: "Brain-boosting foods and nutrition tips",
+      channel: "Pick Up Limes",
+      views: "1.1M views",
+      duration: "8:15",
+      embedUrl: "https://www.youtube.com/embed/lI26YcbIX2c"
     },
     {
       id: "BQ9YtJC-Kd8",
