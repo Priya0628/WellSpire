@@ -11,16 +11,6 @@ export interface Video {
 export const videoData: Record<string, Video[]> = {
   food: [
     {
-      id: "OJAEaAom5FQ",
-      title: "The power of believing that you can improve | Carol Dweck",
-      description: "Growth mindset for health and nutrition changes",
-      channel: "TED",
-      views: "1.2M views",
-      duration: "10:20",
-      embedUrl: "https://www.youtube.com/embed/OJAEaAom5FQ"
-    },
-
-    {
       id: "TvHqwYwhKzM",
       title: "How the food you eat affects your brain - Mia Nacamulli",
       description: "Discover how food impacts your brain and mental performance",
@@ -30,15 +20,6 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/TvHqwYwhKzM"
     },
     {
-      id: "lI26YcbIX2c", 
-      title: "What I eat in a day for a healthy brain",
-      description: "Brain-boosting foods and nutrition tips",
-      channel: "Pick Up Limes",
-      views: "1.1M views",
-      duration: "8:15",
-      embedUrl: "https://www.youtube.com/embed/lI26YcbIX2c"
-    },
-    {
       id: "aUaInS6HIGo",
       title: "The surprising habit that could help you live longer | Dan Buettner",
       description: "Insights from the world's longest-lived communities about healthy eating",
@@ -46,15 +27,6 @@ export const videoData: Record<string, Video[]> = {
       views: "2.1M views",
       duration: "19:27",
       embedUrl: "https://www.youtube.com/embed/aUaInS6HIGo"
-    },
-    {
-      id: "jOeJn1RoxNc",
-      title: "What I learned from 100 days of rejection | Jia Jiang",
-      description: "Building confidence and resilience through wellness mindset",
-      channel: "TED",
-      views: "8.9M views",
-      duration: "15:24",
-      embedUrl: "https://www.youtube.com/embed/jOeJn1RoxNc"
     }
   ],
   health: [
@@ -105,15 +77,6 @@ export const videoData: Record<string, Video[]> = {
     }
   ],
   workout: [
-    {
-      id: "arj7oStGLkU",
-      title: "The power of believing that you can improve | Carol Dweck",
-      description: "Growth mindset applied to fitness and physical improvement",
-      channel: "TED",
-      views: "21M views",
-      duration: "10:20",
-      embedUrl: "https://www.youtube.com/embed/arj7oStGLkU"
-    },
     {
       id: "Xe1TZaElTAs",
       title: "Why some people find exercise harder than others | Emily Balcetis",
