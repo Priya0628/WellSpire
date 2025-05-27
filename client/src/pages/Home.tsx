@@ -81,31 +81,42 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-              Welcome to <span className="text-primary">Wellspire</span>
+            <div className="mb-8">
+              <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                Your Wellness Journey Starts Here ✨
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Wellspire</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
               A refreshing space for wellness inspiration. Discover curated videos and uplifting tips to support you on your journey to feeling your best.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/food">
-                <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 transform hover:scale-105">
-                  <Play className="inline mr-2 h-4 w-4" />
-                  Explore Videos
+                <button className="group bg-gradient-to-r from-primary to-primary/90 text-white px-10 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                  <Play className="mr-3 h-5 w-5 group-hover:animate-pulse" />
+                  Explore Wellness Videos
                 </button>
               </Link>
               <Link href="/tips">
-                <button className="bg-white text-primary border-2 border-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200 transform hover:scale-105">
-                  <Users className="inline mr-2 h-4 w-4" />
-                  Share & Discover Tips
+                <button className="group bg-white text-primary border-2 border-primary px-10 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-lg flex items-center justify-center">
+                  <Users className="mr-3 h-5 w-5 group-hover:animate-pulse" />
+                  Join Our Community
                 </button>
               </Link>
             </div>
           </div>
         </div>
+        
+        {/* Floating elements for visual interest */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
+        <div className="absolute top-1/2 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-20 animate-pulse animation-delay-2000"></div>
       </section>
 
       {/* Features Section */}
