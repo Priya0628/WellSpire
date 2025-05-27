@@ -1,132 +1,168 @@
-export interface Video {
+export interface ContentItem {
   id: string;
   title: string;
   description: string;
-  channel: string;
-  views: string;
-  duration: string;
-  embedUrl: string;
+  source: string;
+  type: "channel" | "article" | "tip";
+  url?: string;
+  subscribers?: string;
 }
 
-export const videoData: Record<string, Video[]> = {
+export const contentData: Record<string, ContentItem[]> = {
   food: [
     {
-      id: "TvHqwYwhKzM",
-      title: "How the food you eat affects your brain - Mia Nacamulli",
-      description: "Discover how food impacts your brain and mental performance",
-      channel: "TED-Ed",
-      views: "3.2M views",
-      duration: "4:52",
-      embedUrl: "https://www.youtube.com/embed/TvHqwYwhKzM"
+      id: "1",
+      title: "Pick Up Limes",
+      description: "Plant-based nutrition and healthy cooking with a registered dietitian",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@PickUpLimes",
+      subscribers: "2.1M subscribers"
     },
     {
-      id: "aUaInS6HIGo",
-      title: "The surprising habit that could help you live longer | Dan Buettner",
-      description: "Insights from the world's longest-lived communities about healthy eating",
-      channel: "TED",
-      views: "2.1M views",
-      duration: "19:27",
-      embedUrl: "https://www.youtube.com/embed/aUaInS6HIGo"
+      id: "2", 
+      title: "Rainbow Plant Life",
+      description: "Vibrant plant-based recipes and nutrition education",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@RainbowPlantLife",
+      subscribers: "1.8M subscribers"
+    },
+    {
+      id: "3",
+      title: "Cheap Lazy Vegan",
+      description: "Budget-friendly healthy meals and practical nutrition tips",
+      source: "YouTube Channel", 
+      type: "channel",
+      url: "https://www.youtube.com/@CheapLazyVegan",
+      subscribers: "865K subscribers"
+    },
+    {
+      id: "4",
+      title: "Start Your Day with Protein",
+      description: "Research shows eating 20-30g protein at breakfast helps maintain stable blood sugar and energy levels throughout the day",
+      source: "Nutrition Science",
+      type: "tip"
+    },
+    {
+      id: "5",
+      title: "Hydrate Before You Caffeinate", 
+      description: "Drink a glass of water when you wake up to rehydrate your body after 7-8 hours without fluids",
+      source: "Wellness Practice",
+      type: "tip"
     }
   ],
   health: [
     {
-      id: "RcGyVTAoXEU",
-      title: "The power of vulnerability | Brené Brown",
-      description: "Understanding vulnerability as a pathway to courage and authentic living",
-      channel: "TED",
-      views: "19M views",
-      duration: "20:04",
-      embedUrl: "https://www.youtube.com/embed/RcGyVTAoXEU"
+      id: "6",
+      title: "Psych2Go",
+      description: "Mental health awareness and psychology education in accessible formats",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@Psych2go",
+      subscribers: "11.2M subscribers"
     },
     {
-      id: "fLJsdqxnZb0",
-      title: "Your body language may shape who you are | Amy Cuddy",
-      description: "How posture and body language can boost confidence and reduce stress",
-      channel: "TED",
-      views: "21M views",
-      duration: "21:02",
-      embedUrl: "https://www.youtube.com/embed/fLJsdqxnZb0"
+      id: "7",
+      title: "TEDx Talks",
+      description: "Inspiring talks on wellness, mental health, and personal development",
+      source: "YouTube Channel",
+      type: "channel", 
+      url: "https://www.youtube.com/@TEDxTalks",
+      subscribers: "37.8M subscribers"
     },
     {
-      id: "WPPPFqsECz0",
-      title: "The happy secret to better work | Shawn Achor",
-      description: "How positive psychology can boost happiness and improve performance",
-      channel: "TED",
-      views: "27M views",
-      duration: "12:20",
-      embedUrl: "https://www.youtube.com/embed/WPPPFqsECz0"
+      id: "8",
+      title: "Practice Daily Gratitude",
+      description: "Studies show writing down 3 things you're grateful for each day can improve mood and life satisfaction within weeks",
+      source: "Psychology Research",
+      type: "tip"
     },
     {
-      id: "pN34FNbOKXc",
-      title: "The puzzle of motivation | Dan Pink",
-      description: "Understanding what truly motivates us for lasting change",
-      channel: "TED",
-      views: "29M views",
-      duration: "18:36",
-      embedUrl: "https://www.youtube.com/embed/pN34FNbOKXc"
+      id: "9",
+      title: "Take Walking Breaks",
+      description: "A 10-minute walk can boost creativity by 60% and reduce stress hormones like cortisol",
+      source: "Stanford Research",
+      type: "tip"
     },
     {
-      id: "QX_oy9614HQ",
-      title: "The power of introverts | Susan Cain",
-      description: "Understanding and embracing different personality types for better mental health",
-      channel: "TED",
-      views: "31M views",
-      duration: "19:04",
-      embedUrl: "https://www.youtube.com/embed/QX_oy9614HQ"
+      id: "10",
+      title: "Digital Sunset Routine",
+      description: "Stop using screens 1 hour before bed to improve sleep quality and mental clarity",
+      source: "Sleep Science",
+      type: "tip"
     }
   ],
   workout: [
     {
-      id: "Xe1TZaElTAs",
-      title: "Why some people find exercise harder than others | Emily Balcetis",
-      description: "Understanding different perspectives on exercise and motivation",
-      channel: "TED",
-      views: "3.2M views",
-      duration: "13:15",
-      embedUrl: "https://www.youtube.com/embed/Xe1TZaElTAs"
+      id: "11",
+      title: "FitnessBlender",
+      description: "Free workout videos for all fitness levels, from beginner to advanced",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@FitnessBlender",
+      subscribers: "6.8M subscribers"
     },
     {
-      id: "WBupia9oidU",
-      title: "The brain-changing benefits of exercise | Wendy Suzuki",
-      description: "How physical activity transforms your brain and improves cognitive function",
-      channel: "TED",
-      views: "5.2M views",
-      duration: "13:02",
-      embedUrl: "https://www.youtube.com/embed/WBupia9oidU"
+      id: "12",
+      title: "Yoga with Adriene",
+      description: "Accessible yoga and movement practices for all bodies and experience levels",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@yogawithadriene",
+      subscribers: "12.1M subscribers"
+    },
+    {
+      id: "13",
+      title: "Start with 10 Minutes",
+      description: "Even 10 minutes of movement daily can improve mood, energy, and cardiovascular health",
+      source: "Exercise Science",
+      type: "tip"
+    },
+    {
+      id: "14",
+      title: "Exercise Snacks",
+      description: "Take 2-minute movement breaks every hour - like wall push-ups or desk stretches",
+      source: "Workplace Wellness",
+      type: "tip"
     }
   ],
   yoga: [
     {
-      id: "iN6g2mr0p3Q",
-      title: "How to make stress your friend | Kelly McGonigal",
-      description: "Transform your relationship with stress through mindfulness",
-      channel: "TED",
-      views: "28M views",
-      duration: "14:28",
-      embedUrl: "https://www.youtube.com/embed/iN6g2mr0p3Q"
+      id: "15",
+      title: "Headspace",
+      description: "Guided meditation and mindfulness practices for stress reduction and sleep",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@Headspace",
+      subscribers: "2.3M subscribers"
     },
     {
-      id: "rqoxYKtEWEc",
-      title: "10-minute meditation for beginners",
-      description: "Simple guided meditation to start your mindfulness practice",
-      channel: "Headspace",
-      views: "8.5M views",
-      duration: "11:07",
-      embedUrl: "https://www.youtube.com/embed/rqoxYKtEWEc"
+      id: "16",
+      title: "The Honest Guys - Meditations",
+      description: "Relaxing guided meditations for sleep, stress relief, and mindfulness",
+      source: "YouTube Channel",
+      type: "channel",
+      url: "https://www.youtube.com/@TheHonestGuys",
+      subscribers: "2.1M subscribers"
     },
     {
-      id: "LkoOCw_tp1I",
-      title: "The brain benefits of deep sleep | Matt Walker",
-      description: "Understanding how quality sleep supports mental and physical wellness",
-      channel: "TED",
-      views: "4.8M views",
-      duration: "19:18",
-      embedUrl: "https://www.youtube.com/embed/LkoOCw_tp1I"
+      id: "17",
+      title: "Box Breathing Technique",
+      description: "Breathe in for 4, hold for 4, out for 4, hold for 4. Repeat to reduce anxiety instantly",
+      source: "Mindfulness Practice",
+      type: "tip"
+    },
+    {
+      id: "18",
+      title: "Morning Intention Setting",
+      description: "Spend 2 minutes each morning setting a positive intention for your day",
+      source: "Mindfulness Research",
+      type: "tip"
     }
   ]
 };
 
-export const getCategoryVideos = (category: string): Video[] => {
-  return videoData[category] || [];
+export const getCategoryContent = (category: string): ContentItem[] => {
+  return contentData[category] || [];
 };
