@@ -68,13 +68,23 @@ export default function TipsPage() {
           <Users className="text-primary inline mr-3" />
           Wellness Tips & Inspiration
         </h1>
-        <p className="text-lg text-gray-800">A supportive space to share practical wellness tips and find inspiration for your journey</p>
+        <p className="text-lg text-gray-800 mb-4">A supportive space to share practical wellness tips and find inspiration for your journey</p>
+        <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-4 border-l-4 border-primary">
+          <p className="text-gray-700 italic">
+            "Every small step matters. Your journey is unique, and what works for you might be exactly what someone else needs to hear. Together, we're building a community of support, encouragement, and real wellness wisdom." ✨
+          </p>
+        </div>
       </div>
 
       {/* Tips Submission Form */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Share Your Wellness Tip</h2>
-        <p className="text-gray-600 mb-6">Your experience matters. Share what's working for you to inspire others on their wellness journey.</p>
+        <p className="text-gray-600 mb-4">Your experience matters. Share what's working for you to inspire others on their wellness journey.</p>
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+          <p className="text-blue-800 text-sm">
+            💙 <strong>Remember:</strong> There's no perfect way to wellness. Share what's genuinely helping you, even if it seems small. Your honest experience could be the encouragement someone else needs today.
+          </p>
+        </div>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
