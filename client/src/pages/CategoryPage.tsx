@@ -1,6 +1,9 @@
 import { getCategoryContent } from "@/lib/videos";
 import ContentCard from "@/components/ContentCard";
-import { Apple, Heart, Dumbbell, MessageSquareOff } from "lucide-react";
+import TipCard from "@/components/TipCard";
+import { useQuery } from "@tanstack/react-query";
+import type { Tip } from "@shared/schema";
+import { Apple, Heart, Dumbbell, MessageSquareOff, Users } from "lucide-react";
 
 interface CategoryPageProps {
   category: string;
@@ -44,6 +47,14 @@ const categoryConfig = {
 export default function CategoryPage({ category }: CategoryPageProps) {
   const config = categoryConfig[category as keyof typeof categoryConfig];
   const content = getCategoryContent(category);
+
+  // Fetch all tips and filter by category
+  const { data: allTips = [] } = useQuery<Tip[]>({
+    queryKey: ['/api/tips'],
+  });
+
+  // Filter tips for this specific category
+  const categoryTips = allTips.filter(tip => tip.category === category);
 
   if (!config) {
     return <div>Category not found</div>;
@@ -104,6 +115,36 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             />
           ))}
         </div>
+      </div>
+
+      {/* Community Tips Section */}
+      <div className="mb-8">
+        <div className="flex items-center mb-6">
+          <Users className="h-6 w-6 text-primary mr-3" />
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Community Tips for {config.title}
+          </h2>
+        </div>
+        
+        {categoryTips.length === 0 ? (
+          <div className="text-center py-8 bg-gray-50 rounded-xl">
+            <MessageSquareOff className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-600">No community tips yet for {config.title.toLowerCase()}.</p>
+            <p className="text-sm text-gray-500 mt-2">Be the first to share your {config.title.toLowerCase()} wisdom!</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {categoryTips.map((tip) => (
+              <TipCard
+                key={tip.id}
+                username={tip.username}
+                category={tip.category}
+                content={tip.content}
+                createdAt={tip.createdAt}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
