@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 136 34% 36%; /* #2D7D32 - wellness green */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 198 93% 64%; /* #4FC3F7 - calming blue */
+  --secondary-foreground: 0 0% 9%;
+  --accent: 132 36% 64%; /* #81C784 - light green */
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Wellness theme colors */
+  --wellness-green: 136 34% 36%; /* #2D7D32 */
+  --wellness-blue: 198 93% 64%; /* #4FC3F7 */
+  --wellness-accent: 132 36% 64%; /* #81C784 */
+  --wellness-neutral-100: 0 0% 96%; /* #F5F5F5 */
+  --wellness-neutral-800: 0 0% 26%; /* #424242 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 136 34% 36%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .wellness-primary {
+    color: hsl(var(--wellness-green));
+  }
+  
+  .wellness-secondary {
+    color: hsl(var(--wellness-blue));
+  }
+  
+  .wellness-accent {
+    color: hsl(var(--wellness-accent));
+  }
+  
+  .bg-wellness-primary {
+    background-color: hsl(var(--wellness-green));
+  }
+  
+  .bg-wellness-secondary {
+    background-color: hsl(var(--wellness-blue));
+  }
+  
+  .bg-wellness-accent {
+    background-color: hsl(var(--wellness-accent));
+  }
+}
