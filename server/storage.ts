@@ -55,11 +55,6 @@ export class MemStorage implements IStorage {
         username: "Alex P.",
         category: "food",
         content: "I add a handful of spinach to my smoothies. Can't taste it at all, but I know I'm getting extra nutrients without any effort!"
-      },
-      {
-        username: "Jessica H.",
-        category: "food",
-        content: "MyFitnessPal has been a game-changer for me! Tracking my food intake helped me understand my eating patterns and make healthier choices without being restrictive."
       }
     ];
 

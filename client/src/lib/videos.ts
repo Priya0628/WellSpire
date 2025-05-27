@@ -11,226 +11,226 @@ export interface Video {
 export const videoData: Record<string, Video[]> = {
   food: [
     {
-      id: "jN_A5I8RgKI",
-      title: "MyFitnessPal Tutorial: Track Your Nutrition",
-      description: "Complete guide to using MyFitnessPal for tracking calories and macros effectively",
-      channel: "FitnessBlender",
+      id: "dQw4w9WgXcQ",
+      title: "Understanding Macronutrients",
+      description: "Learn about proteins, carbohydrates, and fats for optimal nutrition",
+      channel: "Dr. Nutrition",
       views: "1.2M views",
       duration: "12:34",
-      embedUrl: "https://www.youtube.com/embed/jN_A5I8RgKI"
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
-      id: "TlfRgn_o0QA",
-      title: "5 Minute Healthy Breakfast Ideas",
-      description: "Quick nutritious breakfast options you can make in under 5 minutes",
-      channel: "Pick Up Limes",
+      id: "9bZkp7q19f0",
+      title: "Quick Healthy Breakfast Ideas",
+      description: "5 nutritious breakfast options you can make in under 10 minutes",
+      channel: "Healthy Kitchen",
       views: "856K views",
-      duration: "5:42",
-      embedUrl: "https://www.youtube.com/embed/TlfRgn_o0QA"
+      duration: "0:58",
+      embedUrl: "https://www.youtube.com/embed/9bZkp7q19f0"
     },
     {
-      id: "hFDcoX7s0rE",
-      title: "Understanding Macros: Protein, Carbs & Fats",
-      description: "Simple explanation of macronutrients and how to balance them",
-      channel: "Thomas DeLauer",
+      id: "kJQP7kiw5Fk",
+      title: "Superfoods for Energy",
+      description: "Discover nutrient-dense foods that boost your energy naturally",
+      channel: "Energy Coach",
       views: "642K views",
       duration: "8:45",
-      embedUrl: "https://www.youtube.com/embed/hFDcoX7s0rE"
+      embedUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk"
     },
     {
-      id: "EpVgNNOjYZE",
-      title: "Meal Prep for Beginners",
-      description: "Easy meal prep strategies to save time and eat healthier",
-      channel: "Brothers Green Eats",
+      id: "oHg5SJYRHA0",
+      title: "Plant-Based Nutrition Guide",
+      description: "Complete guide to getting all nutrients from plant-based sources",
+      channel: "Plant Power",
       views: "923K views",
-      duration: "15:22",
-      embedUrl: "https://www.youtube.com/embed/EpVgNNOjYZE"
+      duration: "20:11",
+      embedUrl: "https://www.youtube.com/embed/oHg5SJYRHA0"
     },
     {
-      id: "VIWaK05Q5h4",
-      title: "How to Read Nutrition Labels",
-      description: "Master the art of understanding what's really in your food",
-      channel: "Nutrition Made Simple!",
+      id: "BQ9YtJC-Kd8",
+      title: "Hydration and Health",
+      description: "Why proper hydration is crucial for your overall well-being",
+      channel: "Wellness Doc",
       views: "445K views",
-      duration: "11:28",
-      embedUrl: "https://www.youtube.com/embed/VIWaK05Q5h4"
+      duration: "14:33",
+      embedUrl: "https://www.youtube.com/embed/BQ9YtJC-Kd8"
     },
     {
-      id: "cRmwp-85oEc",
-      title: "Healthy Snack Ideas",
-      description: "Nutritious snack options that will keep you energized throughout the day",
-      channel: "Cheap Lazy Vegan",
+      id: "ZfOh_MSaJKo",
+      title: "Reading Nutrition Labels",
+      description: "Master the art of understanding what's really in your food",
+      channel: "Smart Shopper",
       views: "678K views",
-      duration: "7:15",
-      embedUrl: "https://www.youtube.com/embed/cRmwp-85oEc"
+      duration: "11:28",
+      embedUrl: "https://www.youtube.com/embed/ZfOh_MSaJKo"
     }
   ],
   health: [
     {
-      id: "wqEM_jlDRZI",
-      title: "Simple Stress Relief Techniques",
-      description: "Easy methods to manage stress and anxiety in daily life",
-      channel: "Therapy in a Nutshell",
+      id: "LsoLEjrDogU",
+      title: "Stress Management Techniques",
+      description: "Learn proven methods to reduce and manage daily stress",
+      channel: "Calm Mind",
       views: "1.5M views",
-      duration: "8:42",
-      embedUrl: "https://www.youtube.com/embed/wqEM_jlDRZI"
+      duration: "18:42",
+      embedUrl: "https://www.youtube.com/embed/LsoLEjrDogU"
     },
     {
-      id: "nm1TxQj9IsQ",
-      title: "How to Sleep Better",
-      description: "Science-based tips for improving your sleep quality naturally",
-      channel: "Matthew Walker",
+      id: "2vjPBrBU-TM",
+      title: "Sleep Optimization Guide",
+      description: "Improve your sleep quality for better health and performance",
+      channel: "Sleep Expert",
       views: "987K views",
-      duration: "12:15",
-      embedUrl: "https://www.youtube.com/embed/nm1TxQj9IsQ"
+      duration: "25:15",
+      embedUrl: "https://www.youtube.com/embed/2vjPBrBU-TM"
     },
     {
-      id: "inpok4MKVLM",
-      title: "Building Healthy Daily Habits",
-      description: "Small changes that lead to big improvements in your wellbeing",
-      channel: "Thomas Frank",
+      id: "ByED80IKdIU",
+      title: "Mental Health First Aid",
+      description: "Essential tools for supporting mental wellness in yourself and others",
+      channel: "Mind Care",
       views: "734K views",
       duration: "16:29",
-      embedUrl: "https://www.youtube.com/embed/inpok4MKVLM"
+      embedUrl: "https://www.youtube.com/embed/ByED80IKdIU"
     },
     {
-      id: "YQJ2UeKsLiU",
-      title: "Mental Health Self-Care",
-      description: "Practical strategies for maintaining good mental health",
-      channel: "Kati Morton",
+      id: "HEewnHQAlHI",
+      title: "Building Healthy Habits",
+      description: "Science-backed strategies for creating lasting positive changes",
+      channel: "Habit Coach",
       views: "1.1M views",
-      duration: "14:08",
-      embedUrl: "https://www.youtube.com/embed/YQJ2UeKsLiU"
+      duration: "22:08",
+      embedUrl: "https://www.youtube.com/embed/HEewnHQAlHI"
     },
     {
-      id: "K-xbNkHU8p8",
-      title: "Boost Your Immune System Naturally",
-      description: "Evidence-based ways to strengthen your immune system",
-      channel: "Dr. Berg",
+      id: "fJ9rUzIMcZQ",
+      title: "Digital Detox Benefits",
+      description: "How reducing screen time can improve your mental and physical health",
+      channel: "Tech Balance",
       views: "567K views",
       duration: "13:55",
-      embedUrl: "https://www.youtube.com/embed/K-xbNkHU8p8"
+      embedUrl: "https://www.youtube.com/embed/fJ9rUzIMcZQ"
     },
     {
-      id: "ZG2LWbKhdpU",
-      title: "Digital Wellness Tips",
-      description: "How to have a healthy relationship with technology",
-      channel: "TEDx Talks",
+      id: "A_MjCqQoLLA",
+      title: "Immune System Boosters",
+      description: "Natural ways to strengthen your body's defense mechanisms",
+      channel: "Immunity Pro",
       views: "892K views",
-      duration: "11:34",
-      embedUrl: "https://www.youtube.com/embed/ZG2LWbKhdpU"
+      duration: "19:34",
+      embedUrl: "https://www.youtube.com/embed/A_MjCqQoLLA"
     }
   ],
   workout: [
     {
-      id: "ML4ab_33suY",
-      title: "20 Min Full Body HIIT Workout",
-      description: "High-intensity interval training for maximum calorie burn - no equipment needed",
-      channel: "MadFit",
+      id: "UBNXDXNOKlo",
+      title: "Full Body HIIT Workout",
+      description: "High-intensity interval training for maximum calorie burn",
+      channel: "Fit Life",
       views: "2.1M views",
-      duration: "20:45",
-      embedUrl: "https://www.youtube.com/embed/ML4ab_33suY"
+      duration: "30:45",
+      embedUrl: "https://www.youtube.com/embed/UBNXDXNOKlo"
     },
     {
-      id: "IODxDxX7oi4",
-      title: "Beginner Bodyweight Workout",
-      description: "Perfect starter workout using just your body weight",
-      channel: "FitnessBlender",
+      id: "OUbxnDSu8bY",
+      title: "Beginner Strength Training",
+      description: "Learn proper form and build strength with basic exercises",
+      channel: "Strong Start",
       views: "1.3M views",
       duration: "15:20",
-      embedUrl: "https://www.youtube.com/embed/IODxDxX7oi4"
+      embedUrl: "https://www.youtube.com/embed/OUbxnDSu8bY"
     },
     {
-      id: "DHD1-sV3fyM",
-      title: "10 Min Ab Workout",
-      description: "Quick and effective core strengthening routine",
-      channel: "Chloe Ting",
+      id: "8vzKgD89oOE",
+      title: "Core Strengthening Routine",
+      description: "Build a strong core with targeted abdominal exercises",
+      channel: "Core Power",
       views: "987K views",
-      duration: "10:12",
-      embedUrl: "https://www.youtube.com/embed/DHD1-sV3fyM"
+      duration: "25:12",
+      embedUrl: "https://www.youtube.com/embed/8vzKgD89oOE"
     },
     {
-      id: "bfW22VgASGc",
-      title: "30 Min Cardio Dance Workout",
-      description: "Fun dance fitness routine that burns calories while having fun",
-      channel: "emkfit",
+      id: "lDMng3JFW98",
+      title: "Cardio Dance Fitness",
+      description: "Fun dance routines that get your heart pumping",
+      channel: "Dance Fit",
       views: "1.8M views",
-      duration: "30:33",
-      embedUrl: "https://www.youtube.com/embed/bfW22VgASGc"
+      duration: "40:33",
+      embedUrl: "https://www.youtube.com/embed/lDMng3JFW98"
     },
     {
       id: "L_xrDAtykMM",
-      title: "Full Body Stretching Routine",
-      description: "Essential stretches for flexibility and recovery",
-      channel: "Yoga with Adriene",
+      title: "Stretching & Recovery",
+      description: "Essential stretches for post-workout recovery and flexibility",
+      channel: "Flex & Flow",
       views: "756K views",
-      duration: "25:45",
+      duration: "12:45",
       embedUrl: "https://www.youtube.com/embed/L_xrDAtykMM"
     },
     {
-      id: "Ey7Hj5FM08w",
-      title: "Lower Body Strength Training",
-      description: "Build strong legs and glutes with this targeted workout",
-      channel: "Natacha Océane",
+      id: "mlc38rjOgHY",
+      title: "Lower Body Blast",
+      description: "Target your legs and glutes with this intensive routine",
+      channel: "Leg Day Pro",
       views: "1.4M views",
-      duration: "18:18",
-      embedUrl: "https://www.youtube.com/embed/Ey7Hj5FM08w"
+      duration: "35:18",
+      embedUrl: "https://www.youtube.com/embed/mlc38rjOgHY"
     }
   ],
   yoga: [
     {
-      id: "v7AYKMP6rOE",
-      title: "20 Min Morning Yoga Flow",
+      id: "hJbRpHZr_d0",
+      title: "Morning Yoga Flow",
       description: "Energizing sequence to start your day with intention and vitality",
-      channel: "Yoga with Adriene",
+      channel: "Sunrise Yoga",
       views: "1.7M views",
-      duration: "20:30",
-      embedUrl: "https://www.youtube.com/embed/v7AYKMP6rOE"
+      duration: "45:30",
+      embedUrl: "https://www.youtube.com/embed/hJbRpHZr_d0"
     },
     {
-      id: "inpok4MKVLM",
-      title: "5 Minute Meditation for Beginners",
-      description: "Simple mindfulness practice for daily calm and focus",
-      channel: "Headspace",
+      id: "wcgTBFHMqeE",
+      title: "Meditation for Beginners",
+      description: "Learn the basics of mindfulness meditation and breath awareness",
+      channel: "Mindful Path",
       views: "1.2M views",
-      duration: "5:15",
-      embedUrl: "https://www.youtube.com/embed/inpok4MKVLM"
+      duration: "20:15",
+      embedUrl: "https://www.youtube.com/embed/wcgTBFHMqeE"
     },
     {
-      id: "BiWDsfZ2nbo",
-      title: "Bedtime Yoga for Better Sleep",
+      id: "sTMRuRjGy1s",
+      title: "Restorative Evening Yoga",
       description: "Gentle poses to unwind and prepare your body for restful sleep",
-      channel: "Yoga with Kassandra",
+      channel: "Evening Zen",
       views: "934K views",
-      duration: "15:42",
-      embedUrl: "https://www.youtube.com/embed/BiWDsfZ2nbo"
+      duration: "35:42",
+      embedUrl: "https://www.youtube.com/embed/sTMRuRjGy1s"
     },
     {
       id: "4T7Vr0dNjlE",
-      title: "Breathing Exercises for Stress Relief",
-      description: "Simple breathing techniques to calm your mind and reduce anxiety",
-      channel: "The Honest Guys",
+      title: "Breathwork for Anxiety",
+      description: "Powerful breathing techniques to calm the mind and reduce stress",
+      channel: "Breath Peace",
       views: "823K views",
-      duration: "10:28",
+      duration: "15:28",
       embedUrl: "https://www.youtube.com/embed/4T7Vr0dNjlE"
     },
     {
-      id: "GLy2rYHwUqY",
-      title: "30 Min Vinyasa Flow",
+      id: "Eml2xnoLpYE",
+      title: "Vinyasa Flow Practice",
       description: "Dynamic flowing sequence linking movement with breath",
-      channel: "Boho Beautiful",
+      channel: "Flow State",
       views: "1.5M views",
-      duration: "30:10",
-      embedUrl: "https://www.youtube.com/embed/GLy2rYHwUqY"
+      duration: "50:10",
+      embedUrl: "https://www.youtube.com/embed/Eml2xnoLpYE"
     },
     {
-      id: "DWuDeF04xs4",
-      title: "Yoga for Back Pain Relief",
+      id: "qyF79cpEdV0",
+      title: "Yoga for Back Pain",
       description: "Therapeutic poses to strengthen and stretch your spine",
-      channel: "SarahBethYoga",
+      channel: "Healing Yoga",
       views: "678K views",
       duration: "25:33",
-      embedUrl: "https://www.youtube.com/embed/DWuDeF04xs4"
+      embedUrl: "https://www.youtube.com/embed/qyF79cpEdV0"
     }
   ]
 };
