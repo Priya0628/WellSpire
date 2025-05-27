@@ -1,16 +1,26 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Play, Users, Apple, Heart, Dumbbell, MessageSquareOff, MapPin, Calendar } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Tip } from "@shared/schema";
 import TipCard from "@/components/TipCard";
+import RetreatModal from "@/components/RetreatModal";
 
 export default function Home() {
+  const [selectedRetreat, setSelectedRetreat] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const { data: tips = [] } = useQuery<Tip[]>({
     queryKey: ["/api/tips"]
   });
 
   // Show latest 3 tips for the timeline
   const latestTips = tips.slice(0, 3);
+
+  const handleRetreatClick = (name: string) => {
+    setSelectedRetreat(name);
+    setIsModalOpen(true);
+  };
 
   const retreatPlaces = [
     {
@@ -198,14 +208,19 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {retreatPlaces.map((place, index) => (
-              <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105">
+              <div 
+                key={index} 
+                onClick={() => handleRetreatClick(place.name)}
+                className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+              >
                 <div className="text-center">
                   <div className="text-4xl mb-4">{place.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center justify-center">
                     <MapPin className="h-5 w-5 mr-2 text-primary" />
                     {place.name}
                   </h3>
-                  <p className="text-gray-600 text-sm">{place.description}</p>
+                  <p className="text-gray-600 text-sm mb-3">{place.description}</p>
+                  <p className="text-primary text-xs font-medium">Click to view centers →</p>
                 </div>
               </div>
             ))}
@@ -219,6 +234,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Retreat Modal */}
+      <RetreatModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        destination={selectedRetreat || ""}
+        centers={[]}
+      />
     </div>
   );
 }

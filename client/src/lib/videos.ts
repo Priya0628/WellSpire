@@ -47,42 +47,42 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/lI26YcbIX2c"
     },
     {
-      id: "BQ9YtJC-Kd8",
-      title: "Hydration and Health",
-      description: "Why proper hydration is crucial for your overall well-being",
-      channel: "Wellness Doc",
-      views: "445K views",
-      duration: "14:33",
-      embedUrl: "https://www.youtube.com/embed/BQ9YtJC-Kd8"
+      id: "aUaInS6HIGo",
+      title: "The surprising habit that could help you live longer | Dan Buettner",
+      description: "Insights from the world's longest-lived communities about healthy eating",
+      channel: "TED",
+      views: "2.1M views",
+      duration: "19:27",
+      embedUrl: "https://www.youtube.com/embed/aUaInS6HIGo"
     },
     {
-      id: "ZfOh_MSaJKo",
-      title: "Reading Nutrition Labels",
-      description: "Master the art of understanding what's really in your food",
-      channel: "Smart Shopper",
-      views: "678K views",
-      duration: "11:28",
-      embedUrl: "https://www.youtube.com/embed/ZfOh_MSaJKo"
+      id: "jOeJn1RoxNc",
+      title: "What I learned from 100 days of rejection | Jia Jiang",
+      description: "Building confidence and resilience through wellness mindset",
+      channel: "TED",
+      views: "8.9M views",
+      duration: "15:24",
+      embedUrl: "https://www.youtube.com/embed/jOeJn1RoxNc"
     }
   ],
   health: [
     {
-      id: "LsoLEjrDogU",
-      title: "Stress Management Techniques",
-      description: "Learn proven methods to reduce and manage daily stress",
-      channel: "Calm Mind",
-      views: "1.5M views",
-      duration: "18:42",
-      embedUrl: "https://www.youtube.com/embed/LsoLEjrDogU"
+      id: "RcGyVTAoXEU",
+      title: "The power of vulnerability | Brené Brown",
+      description: "Understanding vulnerability as a pathway to courage and authentic living",
+      channel: "TED",
+      views: "19M views",
+      duration: "20:04",
+      embedUrl: "https://www.youtube.com/embed/RcGyVTAoXEU"
     },
     {
-      id: "2vjPBrBU-TM",
-      title: "Sleep Optimization Guide",
-      description: "Improve your sleep quality for better health and performance",
-      channel: "Sleep Expert",
-      views: "987K views",
-      duration: "25:15",
-      embedUrl: "https://www.youtube.com/embed/2vjPBrBU-TM"
+      id: "fLJsdqxnZb0",
+      title: "Your body language may shape who you are | Amy Cuddy",
+      description: "How posture and body language can boost confidence and reduce stress",
+      channel: "TED",
+      views: "21M views",
+      duration: "21:02",
+      embedUrl: "https://www.youtube.com/embed/fLJsdqxnZb0"
     },
     {
       id: "ByED80IKdIU",
