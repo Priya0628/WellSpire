@@ -19,15 +19,7 @@ export const videoData: Record<string, Video[]> = {
       duration: "10:20",
       embedUrl: "https://www.youtube.com/embed/OJAEaAom5FQ"
     },
-    {
-      id: "ZfOh_MSaJKo",
-      title: "5 Minute Healthy Breakfast Ideas",
-      description: "Quick and nutritious breakfast options for busy mornings",
-      channel: "HealthyKitchen101",
-      views: "856K views",
-      duration: "5:23",
-      embedUrl: "https://www.youtube.com/embed/ZfOh_MSaJKo"
-    },
+
     {
       id: "TvHqwYwhKzM",
       title: "How the food you eat affects your brain - Mia Nacamulli",
@@ -103,22 +95,13 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/pN34FNbOKXc"
     },
     {
-      id: "fJ9rUzIMcZQ",
-      title: "Digital Detox Benefits",
-      description: "How reducing screen time can improve your mental and physical health",
-      channel: "Tech Balance",
-      views: "567K views",
-      duration: "13:55",
-      embedUrl: "https://www.youtube.com/embed/fJ9rUzIMcZQ"
-    },
-    {
-      id: "A_MjCqQoLLA",
-      title: "Immune System Boosters",
-      description: "Natural ways to strengthen your body's defense mechanisms",
-      channel: "Immunity Pro",
-      views: "892K views",
-      duration: "19:34",
-      embedUrl: "https://www.youtube.com/embed/A_MjCqQoLLA"
+      id: "QX_oy9614HQ",
+      title: "The power of introverts | Susan Cain",
+      description: "Understanding and embracing different personality types for better mental health",
+      channel: "TED",
+      views: "31M views",
+      duration: "19:04",
+      embedUrl: "https://www.youtube.com/embed/QX_oy9614HQ"
     }
   ],
   workout: [
@@ -141,40 +124,13 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/Xe1TZaElTAs"
     },
     {
-      id: "8vzKgD89oOE",
-      title: "Core Strengthening Routine",
-      description: "Build a strong core with targeted abdominal exercises",
-      channel: "Core Power",
-      views: "987K views",
-      duration: "25:12",
-      embedUrl: "https://www.youtube.com/embed/8vzKgD89oOE"
-    },
-    {
-      id: "lDMng3JFW98",
-      title: "Cardio Dance Fitness",
-      description: "Fun dance routines that get your heart pumping",
-      channel: "Dance Fit",
-      views: "1.8M views",
-      duration: "40:33",
-      embedUrl: "https://www.youtube.com/embed/lDMng3JFW98"
-    },
-    {
-      id: "L_xrDAtykMM",
-      title: "Stretching & Recovery",
-      description: "Essential stretches for post-workout recovery and flexibility",
-      channel: "Flex & Flow",
-      views: "756K views",
-      duration: "12:45",
-      embedUrl: "https://www.youtube.com/embed/L_xrDAtykMM"
-    },
-    {
-      id: "mlc38rjOgHY",
-      title: "Lower Body Blast",
-      description: "Target your legs and glutes with this intensive routine",
-      channel: "Leg Day Pro",
-      views: "1.4M views",
-      duration: "35:18",
-      embedUrl: "https://www.youtube.com/embed/mlc38rjOgHY"
+      id: "WBupia9oidU",
+      title: "The brain-changing benefits of exercise | Wendy Suzuki",
+      description: "How physical activity transforms your brain and improves cognitive function",
+      channel: "TED",
+      views: "5.2M views",
+      duration: "13:02",
+      embedUrl: "https://www.youtube.com/embed/WBupia9oidU"
     }
   ],
   yoga: [
@@ -197,40 +153,13 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/rqoxYKtEWEc"
     },
     {
-      id: "sTMRuRjGy1s",
-      title: "Restorative Evening Yoga",
-      description: "Gentle poses to unwind and prepare your body for restful sleep",
-      channel: "Evening Zen",
-      views: "934K views",
-      duration: "35:42",
-      embedUrl: "https://www.youtube.com/embed/sTMRuRjGy1s"
-    },
-    {
-      id: "4T7Vr0dNjlE",
-      title: "Breathwork for Anxiety",
-      description: "Powerful breathing techniques to calm the mind and reduce stress",
-      channel: "Breath Peace",
-      views: "823K views",
-      duration: "15:28",
-      embedUrl: "https://www.youtube.com/embed/4T7Vr0dNjlE"
-    },
-    {
-      id: "Eml2xnoLpYE",
-      title: "Vinyasa Flow Practice",
-      description: "Dynamic flowing sequence linking movement with breath",
-      channel: "Flow State",
-      views: "1.5M views",
-      duration: "50:10",
-      embedUrl: "https://www.youtube.com/embed/Eml2xnoLpYE"
-    },
-    {
-      id: "qyF79cpEdV0",
-      title: "Yoga for Back Pain",
-      description: "Therapeutic poses to strengthen and stretch your spine",
-      channel: "Healing Yoga",
-      views: "678K views",
-      duration: "25:33",
-      embedUrl: "https://www.youtube.com/embed/qyF79cpEdV0"
+      id: "LkoOCw_tp1I",
+      title: "The brain benefits of deep sleep | Matt Walker",
+      description: "Understanding how quality sleep supports mental and physical wellness",
+      channel: "TED",
+      views: "4.8M views",
+      duration: "19:18",
+      embedUrl: "https://www.youtube.com/embed/LkoOCw_tp1I"
     }
   ]
 };
