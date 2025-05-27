@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Play, Users, Apple, Heart, Dumbbell, MessageSquareOff, MapPin, Calendar } from "lucide-react";
+import { Play, Users, Apple, Heart, Dumbbell, MessageSquareOff, MapPin, Calendar, Smartphone, BarChart3 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Tip } from "@shared/schema";
 import TipCard from "@/components/TipCard";
@@ -157,6 +157,58 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Calorie Tracking Hint Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mb-4">
+                <Smartphone className="h-8 w-8 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Track Your Nutrition Journey</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Complement your wellness learning with practical tracking. Apps like MyFitnessPal can help you understand your eating patterns and make informed choices.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Log Your Food</h3>
+                <p className="text-gray-600">Track what you eat to understand your nutrition patterns and make mindful choices.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Apple className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Learn About Nutrients</h3>
+                <p className="text-gray-600">Discover the nutritional value of foods and how they fuel your body.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Build Healthy Habits</h3>
+                <p className="text-gray-600">Use insights from tracking to develop sustainable, healthy eating habits.</p>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-sm text-gray-500 mb-4">
+                💡 <strong>Tip:</strong> Start small - even tracking for a few days can provide valuable insights about your eating patterns.
+              </p>
+              <div className="inline-flex items-center bg-gray-50 px-4 py-2 rounded-full text-sm text-gray-600">
+                Popular apps: MyFitnessPal • Cronometer • Lose It!
+              </div>
+            </div>
           </div>
         </div>
       </section>

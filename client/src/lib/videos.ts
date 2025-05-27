@@ -85,22 +85,22 @@ export const videoData: Record<string, Video[]> = {
       embedUrl: "https://www.youtube.com/embed/fLJsdqxnZb0"
     },
     {
-      id: "ByED80IKdIU",
-      title: "Mental Health First Aid",
-      description: "Essential tools for supporting mental wellness in yourself and others",
-      channel: "Mind Care",
-      views: "734K views",
-      duration: "16:29",
-      embedUrl: "https://www.youtube.com/embed/ByED80IKdIU"
+      id: "WPPPFqsECz0",
+      title: "The happy secret to better work | Shawn Achor",
+      description: "How positive psychology can boost happiness and improve performance",
+      channel: "TED",
+      views: "27M views",
+      duration: "12:20",
+      embedUrl: "https://www.youtube.com/embed/WPPPFqsECz0"
     },
     {
-      id: "HEewnHQAlHI",
-      title: "Building Healthy Habits",
-      description: "Science-backed strategies for creating lasting positive changes",
-      channel: "Habit Coach",
-      views: "1.1M views",
-      duration: "22:08",
-      embedUrl: "https://www.youtube.com/embed/HEewnHQAlHI"
+      id: "pN34FNbOKXc",
+      title: "The puzzle of motivation | Dan Pink",
+      description: "Understanding what truly motivates us for lasting change",
+      channel: "TED",
+      views: "29M views",
+      duration: "18:36",
+      embedUrl: "https://www.youtube.com/embed/pN34FNbOKXc"
     },
     {
       id: "fJ9rUzIMcZQ",
@@ -123,22 +123,22 @@ export const videoData: Record<string, Video[]> = {
   ],
   workout: [
     {
-      id: "UBNXDXNOKlo",
-      title: "Full Body HIIT Workout",
-      description: "High-intensity interval training for maximum calorie burn",
-      channel: "Fit Life",
-      views: "2.1M views",
-      duration: "30:45",
-      embedUrl: "https://www.youtube.com/embed/UBNXDXNOKlo"
+      id: "arj7oStGLkU",
+      title: "The power of believing that you can improve | Carol Dweck",
+      description: "Growth mindset applied to fitness and physical improvement",
+      channel: "TED",
+      views: "21M views",
+      duration: "10:20",
+      embedUrl: "https://www.youtube.com/embed/arj7oStGLkU"
     },
     {
-      id: "OUbxnDSu8bY",
-      title: "Beginner Strength Training",
-      description: "Learn proper form and build strength with basic exercises",
-      channel: "Strong Start",
-      views: "1.3M views",
-      duration: "15:20",
-      embedUrl: "https://www.youtube.com/embed/OUbxnDSu8bY"
+      id: "Xe1TZaElTAs",
+      title: "Why some people find exercise harder than others | Emily Balcetis",
+      description: "Understanding different perspectives on exercise and motivation",
+      channel: "TED",
+      views: "3.2M views",
+      duration: "13:15",
+      embedUrl: "https://www.youtube.com/embed/Xe1TZaElTAs"
     },
     {
       id: "8vzKgD89oOE",
@@ -179,22 +179,22 @@ export const videoData: Record<string, Video[]> = {
   ],
   yoga: [
     {
-      id: "hJbRpHZr_d0",
-      title: "Morning Yoga Flow",
-      description: "Energizing sequence to start your day with intention and vitality",
-      channel: "Sunrise Yoga",
-      views: "1.7M views",
-      duration: "45:30",
-      embedUrl: "https://www.youtube.com/embed/hJbRpHZr_d0"
+      id: "iN6g2mr0p3Q",
+      title: "How to make stress your friend | Kelly McGonigal",
+      description: "Transform your relationship with stress through mindfulness",
+      channel: "TED",
+      views: "28M views",
+      duration: "14:28",
+      embedUrl: "https://www.youtube.com/embed/iN6g2mr0p3Q"
     },
     {
-      id: "wcgTBFHMqeE",
-      title: "Meditation for Beginners",
-      description: "Learn the basics of mindfulness meditation and breath awareness",
-      channel: "Mindful Path",
-      views: "1.2M views",
-      duration: "20:15",
-      embedUrl: "https://www.youtube.com/embed/wcgTBFHMqeE"
+      id: "rqoxYKtEWEc",
+      title: "10-minute meditation for beginners",
+      description: "Simple guided meditation to start your mindfulness practice",
+      channel: "Headspace",
+      views: "8.5M views",
+      duration: "11:07",
+      embedUrl: "https://www.youtube.com/embed/rqoxYKtEWEc"
     },
     {
       id: "sTMRuRjGy1s",
