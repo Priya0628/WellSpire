@@ -4,6 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
+import WellnessChatbot from "@/components/WellnessChatbot";
 import Home from "@/pages/Home";
 import CategoryPage from "@/pages/CategoryPage";
 import TipsPage from "@/pages/TipsPage";
@@ -59,6 +60,7 @@ function App() {
             <Router />
           </main>
           <Footer />
+          <WellnessChatbot />
         </div>
         <Toaster />
       </TooltipProvider>

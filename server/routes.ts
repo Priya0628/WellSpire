@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertTipSchema, insertActivitySchema } from "@shared/schema";
 import { recommendationService } from "./recommendations";
+import { generateChatbotResponse } from "./chatbot";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -68,6 +69,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to track activity" });
       }
+    }
+  });
+
+  // Wellness Chatbot API
+  app.post("/api/chatbot", async (req, res) => {
+    try {
+      const { message } = req.body;
+      
+      if (!message || typeof message !== 'string') {
+        return res.status(400).json({ error: "Message is required" });
+      }
+
+      const response = await generateChatbotResponse(message);
+      res.json({ response });
+    } catch (error) {
+      console.error('Chatbot error:', error);
+      res.status(500).json({ 
+        response: "I'm having some technical difficulties. Try browsing our wellness content while I get back online!"
+      });
     }
   });
 
