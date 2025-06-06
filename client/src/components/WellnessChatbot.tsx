@@ -91,6 +91,7 @@ export default function WellnessChatbot() {
         <div className="relative">
           <Button
             onClick={() => setIsOpen(true)}
+            data-chatbot-trigger
             className="relative rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-gradient-to-r from-primary via-blue-500 to-purple-600 hover:scale-110 animate-pulse"
             size="icon"
           >

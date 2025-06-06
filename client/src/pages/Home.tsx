@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { Tip } from "@shared/schema";
 import TipCard from "@/components/TipCard";
 import RetreatModal from "@/components/RetreatModal";
+import ChatbotPromo from "@/components/ChatbotPromo";
 
 export default function Home() {
   const [selectedRetreat, setSelectedRetreat] = useState<string | null>(null);
@@ -127,6 +128,17 @@ export default function Home() {
         <div className="absolute top-20 left-10 w-20 h-20 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
         <div className="absolute top-1/2 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-20 animate-pulse animation-delay-2000"></div>
+      </section>
+
+      {/* AI Chatbot Promotion */}
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ChatbotPromo onOpenChatbot={() => {
+            // This will trigger the chatbot to open
+            const chatbotButton = document.querySelector('[data-chatbot-trigger]') as HTMLButtonElement;
+            if (chatbotButton) chatbotButton.click();
+          }} />
+        </div>
       </section>
 
       {/* Features Section */}
