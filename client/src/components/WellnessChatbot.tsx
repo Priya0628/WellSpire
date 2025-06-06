@@ -86,32 +86,35 @@ export default function WellnessChatbot() {
 
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-[9999]">
         {/* Floating Button with Pulse Animation */}
         <div className="relative">
           <Button
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              console.log('Chatbot button clicked!');
+              setIsOpen(true);
+            }}
             data-chatbot-trigger
-            className="relative rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-gradient-to-r from-primary via-blue-500 to-purple-600 hover:scale-110 animate-pulse"
+            className="relative z-[10000] rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-gradient-to-r from-primary via-blue-500 to-purple-600 hover:scale-110 animate-pulse cursor-pointer"
             size="icon"
           >
-            <MessageCircle className="h-7 w-7 text-white" />
+            <MessageCircle className="h-7 w-7 text-white pointer-events-none" />
           </Button>
           
           {/* Glowing Ring Animation */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-500 to-purple-600 opacity-30 animate-ping"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-500 to-purple-600 opacity-30 animate-ping pointer-events-none"></div>
           
           {/* AI Badge */}
-          <div className="absolute -top-2 -left-2 bg-white text-primary text-xs font-bold px-2 py-1 rounded-full shadow-lg border-2 border-primary animate-bounce">
+          <div className="absolute -top-2 -left-2 bg-white text-primary text-xs font-bold px-2 py-1 rounded-full shadow-lg border-2 border-primary animate-bounce pointer-events-none">
             AI
           </div>
           
           {/* Notification Dot */}
-          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse pointer-events-none"></div>
         </div>
         
         {/* Tooltip */}
-        <div className="absolute bottom-20 right-0 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg opacity-0 hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        <div className="absolute bottom-20 right-0 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg opacity-0 hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
           Chat with AI Wellness Assistant
           <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
         </div>

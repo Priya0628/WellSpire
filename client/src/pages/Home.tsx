@@ -136,7 +136,12 @@ export default function Home() {
           <ChatbotPromo onOpenChatbot={() => {
             // This will trigger the chatbot to open
             const chatbotButton = document.querySelector('[data-chatbot-trigger]') as HTMLButtonElement;
-            if (chatbotButton) chatbotButton.click();
+            if (chatbotButton) {
+              console.log('Promotional banner triggering chatbot');
+              chatbotButton.click();
+            } else {
+              console.log('Chatbot button not found');
+            }
           }} />
         </div>
       </section>
