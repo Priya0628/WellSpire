@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: wellspire
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: wellspire-db
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false
+
+databases:
+  - name: wellspire-db
+    databaseName: wellspire
+    user: wellspire_user
+    plan: starter
