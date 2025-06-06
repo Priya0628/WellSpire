@@ -14,7 +14,7 @@ export default function WellnessChatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi! I'm your wellness companion. I can help with nutrition advice, workout suggestions, mindfulness tips, and answer your wellness questions. How can I support your wellness journey today?",
+      text: "Hi! I'm your AI-powered wellness companion, enhanced by OpenAI GPT-4. I can provide personalized nutrition advice, workout suggestions, mindfulness tips, and answer your wellness questions with intelligent, contextual responses. How can I support your wellness journey today?",
       isBot: true,
       timestamp: new Date()
     }
@@ -86,23 +86,53 @@ export default function WellnessChatbot() {
 
   if (!isOpen) {
     return (
-      <Button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
-        size="icon"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </Button>
+      <div className="fixed bottom-6 right-6 z-50">
+        {/* Floating Button with Pulse Animation */}
+        <div className="relative">
+          <Button
+            onClick={() => setIsOpen(true)}
+            className="relative rounded-full w-16 h-16 shadow-2xl hover:shadow-3xl transition-all duration-300 bg-gradient-to-r from-primary via-blue-500 to-purple-600 hover:scale-110 animate-pulse"
+            size="icon"
+          >
+            <MessageCircle className="h-7 w-7 text-white" />
+          </Button>
+          
+          {/* Glowing Ring Animation */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-blue-500 to-purple-600 opacity-30 animate-ping"></div>
+          
+          {/* AI Badge */}
+          <div className="absolute -top-2 -left-2 bg-white text-primary text-xs font-bold px-2 py-1 rounded-full shadow-lg border-2 border-primary animate-bounce">
+            AI
+          </div>
+          
+          {/* Notification Dot */}
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+        </div>
+        
+        {/* Tooltip */}
+        <div className="absolute bottom-20 right-0 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg opacity-0 hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Chat with AI Wellness Assistant
+          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
+        </div>
+      </div>
     );
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 flex flex-col z-50">
+    <div className="fixed bottom-6 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border-2 border-gradient-to-r from-primary to-purple-600 flex flex-col z-50 ring-4 ring-primary/20 ring-offset-2">
       {/* Header */}
       <div className="bg-primary text-white p-4 rounded-t-lg flex items-center justify-between">
-        <div className="flex items-center">
-          <Bot className="h-5 w-5 mr-2" />
-          <span className="font-semibold">Wellness Assistant</span>
+        <div className="flex flex-col">
+          <div className="flex items-center">
+            <Bot className="h-5 w-5 mr-2" />
+            <span className="font-semibold">Wellness Assistant</span>
+          </div>
+          <div className="flex items-center mt-1">
+            <span className="text-xs opacity-80">Powered by</span>
+            <span className="text-xs font-semibold ml-1 bg-white/20 px-2 py-0.5 rounded-full">
+              OpenAI GPT-4
+            </span>
+          </div>
         </div>
         <Button
           onClick={() => setIsOpen(false)}

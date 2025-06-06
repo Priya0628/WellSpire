@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Sparkles, TrendingUp } from "lucide-react";
 import ContentCard from "./ContentCard";
+import OpenAIBadge from "./OpenAIBadge";
 
 interface RecommendationSectionProps {
   username?: string;
