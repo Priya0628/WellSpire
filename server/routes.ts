@@ -73,7 +73,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Wellness Chatbot API
-  app.post("/api/chatbot", async (req, res) => {
+  app.post("/api/chat", async (req, res) => {
     try {
       const { message } = req.body;
       
