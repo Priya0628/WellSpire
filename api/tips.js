@@ -17,7 +17,6 @@ module.exports = async function handler(req, res) {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
     if (req.method === 'GET') {
-      // Ensure table exists
       await pool.query(`
         CREATE TABLE IF NOT EXISTS tips (
           id SERIAL PRIMARY KEY,
