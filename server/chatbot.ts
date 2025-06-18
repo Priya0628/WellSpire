@@ -51,41 +51,66 @@ export async function generateChatbotResponse(userMessage: string): Promise<stri
 function getPatternBasedResponse(message: string): string {
   const lowerMessage = message.toLowerCase();
 
-  // Nutrition patterns
-  if (lowerMessage.includes('food') || lowerMessage.includes('eat') || lowerMessage.includes('nutrition') || lowerMessage.includes('diet')) {
-    return "For nutrition guidance, I recommend exploring our Food & Nutrition section which features trusted channels like Pick Up Limes and Rainbow Plant Life. A simple tip: start with adding one extra serving of vegetables to your daily meals. Small changes make a big difference!";
+  // Breakfast patterns
+  if (lowerMessage.includes('breakfast') || lowerMessage.includes('morning meal')) {
+    return "For a healthy breakfast, try: Greek yogurt with berries and nuts, oatmeal with banana and chia seeds, or avocado toast with a poached egg. These provide protein, fiber, and sustained energy to start your day right!";
   }
 
-  // Exercise patterns
-  if (lowerMessage.includes('exercise') || lowerMessage.includes('workout') || lowerMessage.includes('fitness') || lowerMessage.includes('gym')) {
-    return "Check out our Workout & Exercise section for great fitness resources! FitnessBlender and Yoga with Adriene offer excellent beginner-friendly content. Remember: even 10 minutes of movement daily counts. Start small and build consistency.";
+  // Diet and nutrition patterns
+  if (lowerMessage.includes('food') || lowerMessage.includes('eat') || lowerMessage.includes('nutrition') || lowerMessage.includes('diet') || lowerMessage.includes('meal')) {
+    return "Focus on whole foods: lean proteins, colorful vegetables, whole grains, and healthy fats. Aim for balanced meals with protein, complex carbs, and vegetables. Stay hydrated and eat mindfully. Small, consistent changes work better than drastic restrictions.";
   }
 
-  // Mindfulness/mental health patterns
-  if (lowerMessage.includes('stress') || lowerMessage.includes('anxiety') || lowerMessage.includes('mindful') || lowerMessage.includes('meditation') || lowerMessage.includes('mental')) {
-    return "Our Yoga & Mindfulness section has wonderful resources for mental wellness. Try the box breathing technique: breathe in for 4, hold for 4, out for 4, hold for 4. Headspace and The Honest Guys offer great guided meditations too.";
+  // Exercise and workout patterns
+  if (lowerMessage.includes('exercise') || lowerMessage.includes('workout') || lowerMessage.includes('fitness') || lowerMessage.includes('gym') || lowerMessage.includes('cardio') || lowerMessage.includes('strength')) {
+    return "Start with 150 minutes of moderate exercise weekly. Try: 30-minute walks, bodyweight exercises (push-ups, squats, planks), or beginner yoga. Mix cardio with strength training. Listen to your body and progress gradually.";
+  }
+
+  // Stress and mental health patterns
+  if (lowerMessage.includes('stress') || lowerMessage.includes('anxiety') || lowerMessage.includes('mindful') || lowerMessage.includes('meditation') || lowerMessage.includes('mental') || lowerMessage.includes('calm')) {
+    return "Try these stress-relief techniques: deep breathing (4-7-8 method), 10-minute daily meditation, gentle yoga, or mindful walking. Regular exercise, adequate sleep, and limiting caffeine also help manage stress naturally.";
   }
 
   // Sleep patterns
-  if (lowerMessage.includes('sleep') || lowerMessage.includes('tired') || lowerMessage.includes('insomnia')) {
-    return "Good sleep is crucial for wellness! Try creating a digital sunset routine - stop using screens 1 hour before bed. Our Health & Wellness section has more sleep tips. Consider gentle stretching or reading before bedtime.";
+  if (lowerMessage.includes('sleep') || lowerMessage.includes('tired') || lowerMessage.includes('insomnia') || lowerMessage.includes('rest')) {
+    return "For better sleep: maintain a consistent bedtime, avoid screens 1 hour before bed, keep your room cool and dark, try chamomile tea, and consider gentle stretching or reading. Aim for 7-9 hours nightly.";
+  }
+
+  // Weight management patterns
+  if (lowerMessage.includes('weight') || lowerMessage.includes('lose') || lowerMessage.includes('gain') || lowerMessage.includes('fat') || lowerMessage.includes('muscle')) {
+    return "Sustainable weight management combines balanced nutrition with regular exercise. Focus on whole foods, portion control, staying hydrated, and being patient with progress. Aim for 1-2 pounds per week for healthy weight loss.";
   }
 
   // Water/hydration patterns
   if (lowerMessage.includes('water') || lowerMessage.includes('hydrat') || lowerMessage.includes('drink')) {
-    return "Staying hydrated is so important! Try setting gentle reminders to drink water every 2 hours. A good goal is 8 glasses daily, but listen to your body. Adding a slice of lemon can make it more enjoyable!";
+    return "Aim for 8-10 glasses of water daily. Start your day with a glass of water, carry a water bottle, and eat water-rich foods like cucumbers and watermelon. Proper hydration supports energy, skin health, and overall wellness.";
   }
 
-  // Goal/motivation patterns
-  if (lowerMessage.includes('goal') || lowerMessage.includes('motivat') || lowerMessage.includes('start') || lowerMessage.includes('begin')) {
-    return "Starting your wellness journey is wonderful! The key is beginning small and being consistent. Pick one category that interests you most - Food, Health, Workout, or Mindfulness - and explore our curated content there. You've got this!";
+  // Pain management patterns
+  if (lowerMessage.includes('pain') || lowerMessage.includes('ache') || lowerMessage.includes('sore') || lowerMessage.includes('hurt')) {
+    return "For natural pain relief: try gentle stretching, apply heat or ice as appropriate, practice deep breathing, consider anti-inflammatory foods like turmeric and cherries, and ensure adequate rest. Consult a healthcare provider for persistent pain.";
   }
 
-  // Weight patterns
-  if (lowerMessage.includes('weight') || lowerMessage.includes('lose') || lowerMessage.includes('gain')) {
-    return "Weight management is about creating sustainable, healthy habits. Focus on nourishing your body with whole foods and regular movement you enjoy. Our Food & Nutrition and Workout sections have great resources. Remember to be patient and kind to yourself!";
+  // Energy and fatigue patterns
+  if (lowerMessage.includes('energy') || lowerMessage.includes('fatigue') || lowerMessage.includes('tired') || lowerMessage.includes('boost')) {
+    return "Boost energy naturally: eat balanced meals with protein and complex carbs, stay hydrated, get 7-9 hours of sleep, take short walks, limit processed sugar, and consider B-vitamins from whole foods.";
+  }
+
+  // Goal setting patterns
+  if (lowerMessage.includes('goal') || lowerMessage.includes('motivat') || lowerMessage.includes('start') || lowerMessage.includes('begin') || lowerMessage.includes('plan')) {
+    return "Set SMART goals: Specific, Measurable, Achievable, Relevant, Time-bound. Start small (like 10-minute daily walks), track progress, celebrate wins, and be flexible. Consistency beats perfection every time!";
+  }
+
+  // Vitamin and supplement patterns
+  if (lowerMessage.includes('vitamin') || lowerMessage.includes('supplement') || lowerMessage.includes('nutrient')) {
+    return "Focus on nutrients from whole foods first: vitamin D from sunlight and fish, vitamin C from citrus and berries, iron from leafy greens and lean meats. Consult a healthcare provider before starting supplements.";
+  }
+
+  // General health patterns
+  if (lowerMessage.includes('health') || lowerMessage.includes('wellness') || lowerMessage.includes('healthy') || lowerMessage.includes('tips')) {
+    return "Key wellness habits: eat whole foods, exercise regularly, get quality sleep, manage stress, stay hydrated, maintain social connections, and schedule regular health check-ups. Small daily choices create lasting health benefits.";
   }
 
   // Default supportive response
-  return "I'm here to support your wellness journey! I can help with questions about nutrition, exercise, mindfulness, and general health. You can also explore our four main sections: Food & Nutrition, Health & Wellness, Workout & Exercise, and Yoga & Mindfulness. What aspect of wellness interests you most?";
+  return "I'm here to support your wellness journey! I can provide guidance on nutrition, exercise, stress management, sleep, and healthy lifestyle habits. What specific wellness topic would you like to discuss today?";
 }

@@ -43,7 +43,7 @@ function Footer() {
             <span className="text-2xl font-bold">Wellspire</span>
           </div>
           <p className="text-gray-300 mb-4">Your journey to wellness starts here</p>
-          <p className="text-sm text-gray-400">&copy; 2024 Wellspire. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; 2025 WellSpire. All rights reserved.</p>
         </div>
       </div>
     </footer>
