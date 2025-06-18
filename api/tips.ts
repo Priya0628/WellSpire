@@ -1,14 +1,4 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { Pool, neonConfig } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/neon-serverless';
-import { desc } from 'drizzle-orm';
-import ws from "ws";
-import * as schema from "../shared/schema";
-
-neonConfig.webSocketConstructor = ws;
-
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-const db = drizzle({ client: pool, schema });
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +10,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    // Dynamic imports to avoid module resolution issues in serverless
+    const { Pool, neonConfig } = await import('@neondatabase/serverless');
+    const { drizzle } = await import('drizzle-orm/neon-serverless');
+    const { desc } = await import('drizzle-orm');
+    const ws = await import('ws');
+    const schema = await import('../shared/schema');
+
+    neonConfig.webSocketConstructor = ws.default;
+    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    const db = drizzle({ client: pool, schema });
+
     if (req.method === 'GET') {
       const tips = await db.select().from(schema.tips).orderBy(desc(schema.tips.createdAt));
       return res.json(tips);
