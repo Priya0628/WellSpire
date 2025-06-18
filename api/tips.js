@@ -25,11 +25,11 @@ module.exports = async function handler(req, res) {
           category VARCHAR(50) NOT NULL,
           content TEXT NOT NULL,
           tags JSONB DEFAULT '[]'::jsonb,
-          "createdAt" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
       `);
       
-      const result = await pool.query('SELECT * FROM tips ORDER BY "createdAt" DESC');
+      const result = await pool.query('SELECT id, username, category, content, tags, created_at as "createdAt" FROM tips ORDER BY created_at DESC');
       return res.status(200).json(result.rows);
     }
 
@@ -41,7 +41,7 @@ module.exports = async function handler(req, res) {
       }
 
       const result = await pool.query(
-        'INSERT INTO tips (username, category, content, tags, "createdAt") VALUES ($1, $2, $3, $4, $5) RETURNING *',
+        'INSERT INTO tips (username, category, content, tags, created_at) VALUES ($1, $2, $3, $4, $5) RETURNING id, username, category, content, tags, created_at as "createdAt"',
         [username, category, content, JSON.stringify([]), new Date()]
       );
       
