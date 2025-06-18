@@ -1,6 +1,6 @@
-import OpenAI from "openai";
+const OpenAI = require("openai");
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
       error: error.message 
     });
   }
-}
+};
 
 function getPatternBasedResponse(message) {
   const lowerMessage = message.toLowerCase();
@@ -83,13 +83,5 @@ function getPatternBasedResponse(message) {
     return "Start small and be consistent! Even 10-15 minutes of daily movement helps. Try walking, bodyweight exercises, or activities you enjoy. The best workout is the one you'll actually do.";
   }
 
-  if (lowerMessage.includes('water') || lowerMessage.includes('hydration')) {
-    return "Aim for 8 glasses of water daily, more if you're active. Start your day with water, keep a bottle nearby, and eat water-rich foods like fruits and vegetables.";
-  }
-
-  if (lowerMessage.includes('energy') || lowerMessage.includes('fatigue')) {
-    return "Boost energy naturally: eat balanced meals, stay hydrated, get sunlight exposure, take short walks, and ensure quality sleep. Avoid energy drinks and focus on sustainable habits.";
-  }
-
-  return "Every small step toward wellness matters! Focus on one healthy habit at a time - whether it's drinking more water, taking short walks, or practicing gratitude. What feels most achievable for you today?";
+  return "Every small step toward wellness matters! Focus on one healthy habit at a time. What feels most achievable for you today?";
 }
