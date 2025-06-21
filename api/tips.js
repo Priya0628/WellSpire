@@ -1,9 +1,6 @@
-const { Pool, neonConfig } = require('@neondatabase/serverless');
-const ws = require("ws");
+const { Pool } = require('@neondatabase/serverless');
 
-neonConfig.webSocketConstructor = ws;
-
-module.exports = async function handler(req, res) {
+module.exports = async (req, res) => {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -17,6 +14,7 @@ module.exports = async function handler(req, res) {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
     if (req.method === 'GET') {
+      // Ensure table exists
       await pool.query(`
         CREATE TABLE IF NOT EXISTS tips (
           id SERIAL PRIMARY KEY,
