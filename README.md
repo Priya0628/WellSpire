@@ -1,28 +1,35 @@
 WellSpire 🌿
 A community wellness web app for sharing and discovering lifestyle tips.
 
-💡 About
-WellSpire is a wellness-focused platform where users can explore and share tips across different categories like mental health, productivity, and healthy habits.
+💡 Overview
+WellSpire is a sleek, interactive web app designed for wellness enthusiasts to contribute and discover categorized tips on mindfulness, health, productivity, and more. Built with simplicity and purpose, it encourages community-driven wellness sharing.
 
-🔧 Tech Stack
+🛠️ Tech Stack
 Frontend: React.js
 
 Backend: FastAPI (Python)
 
 Database: PostgreSQL
 
-Deployment: Vercel (serverless)
+Deployment: Vercel (Serverless)
 
-Other Tools: Zod, React Hook Form, OpenAI API (LLM integration)
+Validation & Forms: Zod + React Hook Form
 
-🚀 Features
-Submit and view categorized wellness tips
+AI Integration: OpenAI API (LLM assistant)
 
-Chat-based interaction with LLM assistant
+✨ Key Features
+🔹 Add & browse wellness tips by category
 
-Form validation & error handling
+🔹 Real-time interaction with an intelligent assistant
 
-Real-time logs and monitoring via Vercel
+🔹 Schema-based form validation and error handling
 
-🌐 Live Demo
-https://well-spire-7mpw.vercel.app/
+🔹 Cloud-native deployment with serverless functions
+
+🔹 Live monitoring via Vercel logs
+
+🔗 Live Project
+👉 https://well-spire-7mpw.vercel.app/
+
+
+
